@@ -5,18 +5,8 @@
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <a class="card clearfix"
-    *ngFor="let recipe of Recipes"
-    >
-      <div class="card-body">
-        <div class="float-left">
-          <h4 class="card-title">{{ recipe.name }}</h4>
-          <p class="card-text">{{ recipe.description }}</p>
-        </div>
-        <div class="float-right">
-          <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height:50px">
-        </div>
-      </div>
-    </a>
+    <app-recipe-item 
+    *ngFor="let RecipeElm of Recipes"
+    [recipe]="RecipeElm"></app-recipe-item>
   </div>
 </div>
