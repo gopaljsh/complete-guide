@@ -6,11 +6,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" (click)="onSelect('recipe')">Home</a>
+      <li class="nav-item" [ngClass]="{active: activeTab == 'recipe'}">
+        <a class="nav-link" (click)="onSelect('recipe')">Recipes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" (click)="onSelect('shopping-list')">Link</a>
+      <li class="nav-item" [ngClass]="{active: activeTab !== 'recipe'}">
+        <a class="nav-link" (click)="onSelect('shopping-list')">Shopping List</a>
       </li>
     </ul>
   </div>

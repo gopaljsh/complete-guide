@@ -7,6 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() featureSelected = new EventEmitter<string>();
+  activeTab: string = 'recipe';
 
   constructor() { }
 
@@ -14,6 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onSelect(feature: string) {
+    this.activeTab = feature;
     this.featureSelected.emit(feature);
   }
 
