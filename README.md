@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## License
 
-This project is under MIT License any body can use it.
+This project is under MIT License any body can use it. This is just demo purpose.
