@@ -7,7 +7,6 @@
   <div class="col-sm-12">
     <app-recipe-item 
     *ngFor="let RecipeElm of Recipes"
-    [recipe]="RecipeElm"
-    (recipeSelected)="onRecipeSelected(RecipeElm)"></app-recipe-item>
+    [recipe]="RecipeElm"></app-recipe-item>
   </div>
 </div>
