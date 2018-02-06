@@ -1,11 +1,13 @@
-<a class="card clearfix" style="cursor: pointer;">
+<a class="card clearfix" style="cursor: pointer; color:black; text-decoration:none;" [routerLink]="[index]" routerLinkActive="bg-dark text-white">
   <div class="card-body">
-    <div class="float-left">
-      <h4 class="card-title">{{ recipe.name }}</h4>
-      <p class="card-text">{{ recipe.description }}</p>
-    </div>
-    <div class="float-right">
-      <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height:50px">
+    <div class="row">
+      <div class="col-8">
+        <h4 class="card-title">{{ recipe.name }}</h4>
+        <p class="card-text">{{ recipe.description }}</p>
+      </div>
+      <div class="col-4">
+        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="width:100%;">
+      </div>
     </div>
   </div>
 </a>
