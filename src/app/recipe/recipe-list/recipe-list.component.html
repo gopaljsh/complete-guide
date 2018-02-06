@@ -1,12 +1,13 @@
 <div class="row pt-2 pb-2">
   <div class="col-sm-12">
-    <button class="btn btn-success">New Recipe</button>
+    <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-12">
     <app-recipe-item 
-    *ngFor="let RecipeElm of Recipes"
-    [recipe]="RecipeElm"></app-recipe-item>
+    *ngFor="let RecipeElm of Recipes; let i = index"
+    [recipe]="RecipeElm"
+    [index]="i"></app-recipe-item>
   </div>
 </div>
