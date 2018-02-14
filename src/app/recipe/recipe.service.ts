@@ -43,6 +43,7 @@ export class RecipeService {
 
     addRecipe(recipe: Recipe){
         this.Recipes.push(recipe);
+        this.recipeChanged.next(this.Recipes.slice());
     }
 
     updateRecipe(index: number, newRecipe: Recipe) {
