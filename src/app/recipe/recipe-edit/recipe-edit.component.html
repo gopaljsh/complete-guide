@@ -6,8 +6,9 @@
           <button
             type="submit"
             class="btn btn-success"
+            [disabled]="!recipeForm.valid"
             >Save</button>
-          <button type="button" class="btn btn-danger">Cancel</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
         </div>
       </div>
       <div class="row">
@@ -87,6 +88,7 @@
               <button
                 type="button"
                 class="btn btn-success"
+                (click)="onAddIngredient()"
                 >Add Ingredient</button>
             </div>
           </div>
