@@ -15,4 +15,17 @@
       </li>
     </ul>
   </div>
+  <div class="btn-group" appDropdown>
+    <button type="button" class="btn btn-primary" style="border-radius:5px">
+      Manage Recipe
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li>
+        <a class="dropdown-item" style="cursor:pointer" (click)="onSave()">Save data</a>
+      </li>
+      <li>
+        <a class="dropdown-item">Fetch data</a>
+      </li>
+    </ul>
+  </div>
 </nav>
