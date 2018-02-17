@@ -14,8 +14,20 @@
         <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
       </li>
     </ul>
+
+    <ul class="navbar-nav">
+      <ng-template [ngIf]="!authService.isAuthenticated()">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/signup" class="nav-link">Register</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/signin" class="nav-link">Sign in</a>
+        </li>
+      </ng-template>
+      <li class="nav-item" *ngIf="authService.isAuthenticated()"><a class="nav-link" (click)="onLogout()" style="cursor: pointer;">Logout</a></li>
+    </ul>
   </div>
-  <div class="btn-group" appDropdown>
+  <div class="btn-group" appDropdown *ngIf="authService.isAuthenticated()">
     <button type="button" class="btn btn-primary" style="border-radius:5px">
       Manage Recipe
     </button>
