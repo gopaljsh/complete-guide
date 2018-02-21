@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
 
-import { dataStorageService } from '../shared/data-storage.service';
-import { AuthService } from '../auth/auth.service';
+import { dataStorageService } from '../../shared/data-storage.service';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-header',
