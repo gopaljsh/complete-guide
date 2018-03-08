@@ -13,13 +13,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     firebase.initializeApp({
-      
+
       
     });
   }
 
-  onNavigation(featureEvent: string) {
-    this.loadFeature = featureEvent;
-  }
+  // onNavigation(featureEvent: string) {
+  //   this.loadFeature = featureEvent;
+  // }
 
 }
