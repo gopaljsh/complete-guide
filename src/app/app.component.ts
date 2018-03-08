@@ -13,12 +13,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     firebase.initializeApp({
-      
+      apiKey: "AIzaSyDWA5CndD6weGNToY8CDM8aZCEY4UcKI2I",
+      authDomain: "ng-recipe-book-4c2fc.firebaseapp.com"
     });
   }
 
-  onNavigation(featureEvent: string) {
-    this.loadFeature = featureEvent;
-  }
+  // onNavigation(featureEvent: string) {
+  //   this.loadFeature = featureEvent;
+  // }
 
 }
